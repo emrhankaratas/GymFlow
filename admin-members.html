@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow Admin - Üyeler</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar glass-panel">
+    <div class="logo sidebar-logo">
+      <span class="text-gradient">GYM</span>FLOW
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="admin.html"><span class="nav-icon">📊</span> Dashboard</a></li>
+      <li class="active"><a href="admin-members.html"><span class="nav-icon">👥</span> Üyeler</a></li>
+      <li><a href="admin-classes.html"><span class="nav-icon">🏋️</span> Dersler</a></li>
+      <li><a href="admin-analytics.html"><span class="nav-icon">📈</span> Analitik</a></li>
+      <li><a href="admin-settings.html"><span class="nav-icon">⚙️</span> Ayarlar</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn btn-outline sidebar-exit-btn">← Siteye Dön</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h2>Üyeler</h2>
+        <p class="topbar-sub">Üye yönetimi ve kayıt işlemleri</p>
+      </div>
+      <div class="user-profile">
+        <div class="notif-bell" title="Bildirimler">🔔<span class="notif-badge">3</span></div>
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <span class="user-name">Admin</span>
+          <span class="user-role">Yönetici</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Toolbar -->
+    <div class="page-toolbar">
+      <div class="search-box glass-panel">
+        <span>🔍</span>
+        <input type="text" id="memberSearch" placeholder="Üye ara (ad, e-posta...)">
+      </div>
+      <div class="toolbar-actions">
+        <select id="memberFilter" class="filter-select">
+          <option value="all">Tüm Üyeler</option>
+          <option value="Active">Aktif</option>
+          <option value="Inactive">Pasif</option>
+        </select>
+        <button id="openAddMemberModal" class="btn btn-primary">+ Yeni Üye Ekle</button>
+      </div>
+    </div>
+
+    <!-- Members Table -->
+    <div class="table-section glass-panel">
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th><th>Ad Soyad</th><th>E-posta</th><th>Plan</th><th>Kayıt Tarihi</th><th>Durum</th><th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="memberTableBody"></tbody>
+        </table>
+      </div>
+      <div class="table-footer">
+        <span id="memberCount">Toplam: 0 üye</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add Member Modal -->
+  <div id="addMemberModal" class="modal">
+    <div class="modal-content glass-panel">
+      <span class="close-modal" data-modal="addMemberModal">&times;</span>
+      <h2>Yeni Üye Ekle</h2>
+      <form id="addMemberForm">
+        <div class="form-group">
+          <label for="memberName">Ad Soyad</label>
+          <input type="text" id="memberName" required placeholder="Ahmet Yılmaz">
+        </div>
+        <div class="form-group">
+          <label for="memberEmail">E-posta</label>
+          <input type="email" id="memberEmail" required placeholder="ahmet@mail.com">
+        </div>
+        <div class="form-group">
+          <label for="memberPhone">Telefon</label>
+          <input type="tel" id="memberPhone" placeholder="0555 123 45 67">
+        </div>
+        <div class="form-group">
+          <label for="memberPlan">Üyelik Planı</label>
+          <select id="memberPlan" required>
+            <option value="Başlangıç">Başlangıç (₺499/ay)</option>
+            <option value="Pro" selected>Pro (₺899/ay)</option>
+            <option value="Elite">Elite (₺1.499/ay)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Üye Kaydet</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

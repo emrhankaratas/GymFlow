@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow Admin - Analitik</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar glass-panel">
+    <div class="logo sidebar-logo">
+      <span class="text-gradient">GYM</span>FLOW
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="admin.html"><span class="nav-icon">📊</span> Dashboard</a></li>
+      <li><a href="admin-members.html"><span class="nav-icon">👥</span> Üyeler</a></li>
+      <li><a href="admin-classes.html"><span class="nav-icon">🏋️</span> Dersler</a></li>
+      <li class="active"><a href="admin-analytics.html"><span class="nav-icon">📈</span> Analitik</a></li>
+      <li><a href="admin-settings.html"><span class="nav-icon">⚙️</span> Ayarlar</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn btn-outline sidebar-exit-btn">← Siteye Dön</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h2>Analitik</h2>
+        <p class="topbar-sub">Performans metrikleri ve raporlar</p>
+      </div>
+      <div class="user-profile">
+        <div class="notif-bell" title="Bildirimler">🔔<span class="notif-badge">3</span></div>
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <span class="user-name">Admin</span>
+          <span class="user-role">Yönetici</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">📊</div>
+        <div class="stat-body">
+          <h3>Ortalama Günlük Giriş</h3>
+          <div class="value">156</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-body">
+          <h3>Ort. Kalış Süresi</h3>
+          <div class="value">1.5 sa</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">🏆</div>
+        <div class="stat-body">
+          <h3>En Popüler Ders</h3>
+          <div class="value" style="font-size:1.5rem;">HIIT / CrossFit</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-body">
+          <h3>Üyelik Yenileme</h3>
+          <div class="value">%87</div>
+          <div class="trend positive">↑ %3 geçen aya göre</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="dashboard-row">
+      <div class="chart-container glass-panel">
+        <h3>Aylık Gelir Grafiği (₺)</h3>
+        <div class="bar-chart" id="revenueChart"></div>
+      </div>
+      <div class="chart-container glass-panel">
+        <h3>Plan Dağılımı</h3>
+        <div class="donut-chart-wrap" id="planChart"></div>
+      </div>
+    </div>
+
+    <div class="dashboard-row">
+      <div class="chart-container glass-panel full-width">
+        <h3>Saatlik Yoğunluk Haritası</h3>
+        <div class="heatmap" id="heatmap"></div>
+      </div>
+    </div>
+
+    <!-- Top Members Table -->
+    <div class="table-section glass-panel" style="margin-top: 10px;">
+      <div class="table-header">
+        <h3>En Aktif Üyeler (Bu Ay)</h3>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Sıra</th><th>Ad Soyad</th><th>Giriş Sayısı</th><th>Ort. Süre</th><th>Plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>🥇</td><td style="font-weight:500">Kerem Öztürk</td><td>28</td><td>2.1 sa</td><td><span class="badge badge-plan">Elite</span></td></tr>
+            <tr><td>🥈</td><td style="font-weight:500">Selin Aydın</td><td>25</td><td>1.8 sa</td><td><span class="badge badge-plan">Pro</span></td></tr>
+            <tr><td>🥉</td><td style="font-weight:500">Deniz Yıldırım</td><td>22</td><td>1.5 sa</td><td><span class="badge badge-plan">Elite</span></td></tr>
+            <tr><td>4</td><td style="font-weight:500">Ahmet Yılmaz</td><td>20</td><td>2.0 sa</td><td><span class="badge badge-plan">Pro</span></td></tr>
+            <tr><td>5</td><td style="font-weight:500">Elif Demir</td><td>18</td><td>1.3 sa</td><td><span class="badge badge-plan">Elite</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

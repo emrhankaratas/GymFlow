@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow - Kayıt Ol</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <!-- Left Panel - Branding -->
+    <div class="auth-branding">
+      <div class="auth-branding-overlay"></div>
+      <img src="assets/hero_bg.png" alt="" class="auth-branding-img">
+      <div class="auth-branding-content">
+        <a href="index.html" class="logo auth-logo">
+          <span class="text-gradient">GYM</span>FLOW
+        </a>
+        <h2>Fitness Yolculuğun Başlıyor!</h2>
+        <p>Kayıt ol, ilk haftanı ücretsiz dene. Kredi kartı gerekmez.</p>
+        <div class="auth-branding-stats">
+          <div class="auth-brand-stat">
+            <span>1200+</span>
+            <small>Aktif Üye</small>
+          </div>
+          <div class="auth-brand-stat">
+            <span>50+</span>
+            <small>Eğitmen</small>
+          </div>
+          <div class="auth-brand-stat">
+            <span>30+</span>
+            <small>Ders</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Panel - Form -->
+    <div class="auth-form-panel">
+      <div class="auth-form-wrapper">
+        <div class="auth-form-header">
+          <h1>Kayıt Ol</h1>
+          <p>Ücretsiz hesabınızı oluşturun</p>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <div class="form-row-auth">
+            <div class="form-group">
+              <label for="regFirstName">Ad</label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">👤</span>
+                <input type="text" id="regFirstName" placeholder="Ahmet" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="regLastName">Soyad</label>
+              <div class="input-icon-wrap">
+                <span class="input-icon">👤</span>
+                <input type="text" id="regLastName" placeholder="Yılmaz" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail">E-posta Adresi</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">📧</span>
+              <input type="email" id="regEmail" placeholder="ornek@mail.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regPhone">Telefon</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">📞</span>
+              <input type="tel" id="regPhone" placeholder="0555 123 45 67">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Şifre</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">🔒</span>
+              <input type="password" id="regPassword" placeholder="En az 8 karakter" required minlength="8">
+              <button type="button" class="password-toggle" onclick="togglePassword('regPassword', this)">👁️</button>
+            </div>
+            <div class="password-strength" id="passwordStrength">
+              <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            <small class="strength-text" id="strengthText"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirmPassword">Şifre Tekrar</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">🔒</span>
+              <input type="password" id="regConfirmPassword" placeholder="Şifrenizi tekrar girin" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regPlan">Üyelik Planı</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon">🏷️</span>
+              <select id="regPlan" required>
+                <option value="Başlangıç">Başlangıç - ₺499/ay</option>
+                <option value="Pro" selected>Pro - ₺899/ay</option>
+                <option value="Elite">Elite - ₺1.499/ay</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required>
+              <span class="checkmark"></span>
+              <a href="#">Kullanım şartlarını</a> ve <a href="#">gizlilik politikasını</a> kabul ediyorum
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg auth-submit">Kayıt Ol</button>
+
+          <div class="auth-divider">
+            <span>veya</span>
+          </div>
+
+          <button type="button" class="btn btn-social google-btn">
+            <span class="social-icon">G</span>
+            Google ile Kayıt Ol
+          </button>
+
+          <div class="auth-footer">
+            <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

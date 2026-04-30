@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow Admin - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar glass-panel">
+    <div class="logo sidebar-logo">
+      <span class="text-gradient">GYM</span>FLOW
+    </div>
+    <ul class="sidebar-nav">
+      <li class="active"><a href="admin.html"><span class="nav-icon">📊</span> Dashboard</a></li>
+      <li><a href="admin-members.html"><span class="nav-icon">👥</span> Üyeler</a></li>
+      <li><a href="admin-classes.html"><span class="nav-icon">🏋️</span> Dersler</a></li>
+      <li><a href="admin-analytics.html"><span class="nav-icon">📈</span> Analitik</a></li>
+      <li><a href="admin-settings.html"><span class="nav-icon">⚙️</span> Ayarlar</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn btn-outline sidebar-exit-btn">← Siteye Dön</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h2>Dashboard</h2>
+        <p class="topbar-sub">Genel bakış ve özet bilgiler</p>
+      </div>
+      <div class="user-profile">
+        <div class="notif-bell" title="Bildirimler">🔔<span class="notif-badge">3</span></div>
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <span class="user-name">Admin</span>
+          <span class="user-role">Yönetici</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">👥</div>
+        <div class="stat-body">
+          <h3>Toplam Üye</h3>
+          <div class="value" id="totalMembers">1.204</div>
+          <div class="trend positive">↑ %12 bu ay</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">🟢</div>
+        <div class="stat-body">
+          <h3>Şu An Aktif</h3>
+          <div class="value" id="activeNow">84</div>
+          <div class="trend neutral">Anlık veri</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">💰</div>
+        <div class="stat-body">
+          <h3>Aylık Gelir</h3>
+          <div class="value text-gradient">₺128.500</div>
+          <div class="trend positive">↑ %5 bu ay</div>
+        </div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-icon">📝</div>
+        <div class="stat-body">
+          <h3>Yeni Kayıtlar</h3>
+          <div class="value">47</div>
+          <div class="trend positive">↑ %18 bu ay</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="dashboard-row">
+      <div class="chart-container glass-panel">
+        <h3>Haftalık Giriş Trafiği</h3>
+        <div class="bar-chart" id="weeklyChart"></div>
+      </div>
+      <div class="recent-activity glass-panel">
+        <h3>Son Aktiviteler</h3>
+        <div class="activity-list" id="activityList"></div>
+      </div>
+    </div>
+
+    <!-- Quick Members Table -->
+    <div class="table-section glass-panel">
+      <div class="table-header">
+        <h3>Son Eklenen Üyeler</h3>
+        <a href="admin-members.html" class="btn btn-outline btn-sm">Tümünü Gör →</a>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th><th>Ad Soyad</th><th>Plan</th><th>Kayıt Tarihi</th><th>Durum</th>
+            </tr>
+          </thead>
+          <tbody id="dashboardTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFlow Admin - Ayarlar</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar glass-panel">
+    <div class="logo sidebar-logo">
+      <span class="text-gradient">GYM</span>FLOW
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="admin.html"><span class="nav-icon">📊</span> Dashboard</a></li>
+      <li><a href="admin-members.html"><span class="nav-icon">👥</span> Üyeler</a></li>
+      <li><a href="admin-classes.html"><span class="nav-icon">🏋️</span> Dersler</a></li>
+      <li><a href="admin-analytics.html"><span class="nav-icon">📈</span> Analitik</a></li>
+      <li class="active"><a href="admin-settings.html"><span class="nav-icon">⚙️</span> Ayarlar</a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html" class="btn btn-outline sidebar-exit-btn">← Siteye Dön</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h2>Ayarlar</h2>
+        <p class="topbar-sub">Salon bilgileri ve yapılandırma</p>
+      </div>
+      <div class="user-profile">
+        <div class="notif-bell" title="Bildirimler">🔔<span class="notif-badge">3</span></div>
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <span class="user-name">Admin</span>
+          <span class="user-role">Yönetici</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Settings Grid -->
+    <div class="settings-grid">
+      <div class="settings-card glass-panel">
+        <h3>🏢 Salon Bilgileri</h3>
+        <form id="gymInfoForm">
+          <div class="form-group">
+            <label for="gymName">Salon Adı</label>
+            <input type="text" value="GymFlow Fitness Center" id="gymName">
+          </div>
+          <div class="form-group">
+            <label for="gymAddress">Adres</label>
+            <input type="text" value="Bağdat Caddesi No:123, Kadıköy, İstanbul" id="gymAddress">
+          </div>
+          <div class="form-group">
+            <label for="gymPhone">Telefon</label>
+            <input type="text" value="+90 (216) 555 12 34" id="gymPhone">
+          </div>
+          <div class="form-group">
+            <label for="gymEmail">E-posta</label>
+            <input type="email" value="info@gymflow.com.tr" id="gymEmail">
+          </div>
+          <button type="submit" class="btn btn-primary">Bilgileri Kaydet</button>
+        </form>
+      </div>
+
+      <div class="settings-card glass-panel">
+        <h3>🕐 Çalışma Saatleri</h3>
+        <form id="hoursForm">
+          <div class="form-row-settings">
+            <div class="form-group">
+              <label for="weekdayOpen">Hafta İçi Açılış</label>
+              <input type="time" value="06:00" id="weekdayOpen">
+            </div>
+            <div class="form-group">
+              <label for="weekdayClose">Hafta İçi Kapanış</label>
+              <input type="time" value="23:00" id="weekdayClose">
+            </div>
+          </div>
+          <div class="form-row-settings">
+            <div class="form-group">
+              <label for="weekendOpen">Hafta Sonu Açılış</label>
+              <input type="time" value="08:00" id="weekendOpen">
+            </div>
+            <div class="form-group">
+              <label for="weekendClose">Hafta Sonu Kapanış</label>
+              <input type="time" value="22:00" id="weekendClose">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Saatleri Kaydet</button>
+        </form>
+      </div>
+
+      <div class="settings-card glass-panel">
+        <h3>💰 Üyelik Fiyatları</h3>
+        <form id="pricingForm">
+          <div class="form-group">
+            <label for="priceBasic">Başlangıç Planı (₺/ay)</label>
+            <input type="number" value="499" id="priceBasic">
+          </div>
+          <div class="form-group">
+            <label for="pricePro">Pro Planı (₺/ay)</label>
+            <input type="number" value="899" id="pricePro">
+          </div>
+          <div class="form-group">
+            <label for="priceElite">Elite Planı (₺/ay)</label>
+            <input type="number" value="1499" id="priceElite">
+          </div>
+          <button type="submit" class="btn btn-primary">Fiyatları Güncelle</button>
+        </form>
+      </div>
+
+      <div class="settings-card glass-panel">
+        <h3>🔒 Güvenlik</h3>
+        <form id="securityForm">
+          <div class="form-group">
+            <label for="currentPass">Mevcut Şifre</label>
+            <input type="password" placeholder="••••••••" id="currentPass">
+          </div>
+          <div class="form-group">
+            <label for="newPass">Yeni Şifre</label>
+            <input type="password" placeholder="••••••••" id="newPass">
+          </div>
+          <div class="form-group">
+            <label for="confirmPass">Yeni Şifre (Tekrar)</label>
+            <input type="password" placeholder="••••••••" id="confirmPass">
+          </div>
+          <button type="submit" class="btn btn-primary">Şifreyi Değiştir</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
